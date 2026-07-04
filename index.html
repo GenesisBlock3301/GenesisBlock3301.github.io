@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nur Amin Sifat — Software Engineer, Backend & AI/LLM</title>
+<meta name="description" content="Portfolio of Nur Amin Sifat — Software Engineer specializing in backend systems, AI/LLM applications, and agentic AI. Python, Go, FastAPI, LangChain.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Black+Ops+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="scanline-overlay" aria-hidden="true"></div>
+
+<div class="boot-overlay" id="bootOverlay">
+  <pre class="boot-lines" id="bootLines"></pre>
+  <button class="boot-skip" id="bootSkip">skip ↵</button>
+</div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="site-header" id="siteHeader">
+  <nav class="nav container">
+    <a href="#home" class="logo">NAS<span class="dot">.</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text reveal">
+        <p class="eyebrow">Hi, I'm</p>
+        <h1>Nur Amin Sifat</h1>
+        <h2 class="typewriter"><span id="typewriter"></span><span class="cursor">|</span></h2>
+        <p class="hero-desc">
+          4+ years building <strong>backend systems</strong> and <strong>AI/LLM applications</strong>.
+          Currently engineering LLM-powered inspection platforms at
+          <a href="https://www.sdsmanager.com/" target="_blank" rel="noopener">SDS Manager LTD</a>,
+          with a deep focus on <strong>Agentic AI</strong>, <strong>RAG</strong>, and scalable
+          <strong>Python</strong> / <strong>Go</strong> microservices.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/resume.pdf" class="btn btn-outline" download>Download Resume</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/GenesisBlock3301" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.26 5.69.42.36.78 1.08.78 2.18 0 1.57-.02 2.84-.02 3.23 0 .3.21.66.79.55A10.52 10.52 0 0023.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nur-amin-sifat/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 11.01-4.14 2.07 2.07 0 01-.01 4.14zM7.11 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://nastech.medium.com/" target="_blank" rel="noopener" aria-label="Medium" title="Medium">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.72 6.72 0 01-6.77 6.67A6.72 6.72 0 010 12a6.72 6.72 0 016.77-6.67A6.72 6.72 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+          </a>
+          <a href="https://leetcode.com/u/NAS380/" target="_blank" rel="noopener" aria-label="LeetCode" title="LeetCode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.48 21.36l-4.24-4.53a4.6 4.6 0 01-1.28-3.18 4.6 4.6 0 011.28-3.18l5.78-6.16a1.5 1.5 0 10-2.19-2.05L6.9 8.36a7.6 7.6 0 00-2.11 5.29 7.6 7.6 0 002.11 5.29l4.24 4.53a1.5 1.5 0 102.34-1.87l-.01-.24zM21 15h-9a1.5 1.5 0 000 3h9a1.5 1.5 0 000-3z"/></svg>
+          </a>
+          <a href="https://www.kaggle.com/genesisblock3301" target="_blank" rel="noopener" aria-label="Kaggle" title="Kaggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.83 21.06L11.94 12.9l6.4-6.15h-3.36L8.3 12.8V2.4H5.6v18.66h2.7v-5.1l1.9-1.8 5.4 6.9zM3.94 21.06h2.7V2.4h-2.7z" fill-rule="evenodd" clip-rule="evenodd" transform="translate(1,0)"/><text x="0" y="0" font-size="0"></text></svg>
+          </a>
+          <a href="mailto:mdnuraminsifat380@gmail.com" aria-label="Email" title="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6zm-2 0l-8 5-8-5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <svg class="hero-silhouette" viewBox="0 0 300 340" aria-hidden="true">
+          <path class="sil-fill" d="M150,30 Q95,30 90,110 L90,150 Q90,165 105,165 L195,165 Q210,165 210,150 L210,110 Q205,30 150,30 Z"/>
+          <path class="sil-fill" d="M60,165 Q60,150 90,150 L210,150 Q240,150 240,165 L250,278 Q250,298 230,298 L70,298 Q50,298 50,278 Z"/>
+          <path class="sil-fill" d="M50,278 Q50,318 90,328 L172,318 Q192,313 180,288 L138,268 Q90,258 50,278 Z"/>
+          <path class="sil-fill" d="M250,278 Q250,318 210,328 L128,318 Q108,313 120,288 L162,268 Q210,258 250,278 Z"/>
+          <path class="sil-fill" d="M112,266 L188,266 L182,214 L118,214 Z"/>
+          <rect class="sil-glow" x="128" y="222" width="44" height="30"/>
+          <rect class="sil-fill" x="108" y="264" width="84" height="9" rx="2"/>
+        </svg>
+        <span class="stencil-tag">whoami?</span>
+        <div class="code-card">
+          <div class="code-card-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-card-title">about_me.py</span>
+            <button class="run-btn" id="runCodeBtn" title="Run this">▶ Run</button>
+          </div>
+          <pre class="code-block"><code><span class="kw">class</span> <span class="cls">SoftwareEngineer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="self">self</span>):
+        <span class="self">self</span>.name = <span class="str">"Nur Amin Sifat"</span>
+        <span class="self">self</span>.role = <span class="str">"Software Engineer"</span>
+        <span class="self">self</span>.company = <span class="str">"SDS Manager LTD"</span>
+        <span class="self">self</span>.experience = <span class="num">4</span>+  <span class="cmt"># years</span>
+        <span class="self">self</span>.stack = [
+            <span class="str">"Python"</span>, <span class="str">"Go"</span>, <span class="str">"JavaScript"</span>
+        ]
+        <span class="self">self</span>.focus = [
+            <span class="str">"Agentic AI"</span>, <span class="str">"RAG"</span>,
+            <span class="str">"LLM Fine-tuning"</span>, <span class="str">"Microservices"</span>
+        ]
+        <span class="self">self</span>.location = <span class="str">"Dhaka, Bangladesh 🇧🇩"</span>
+
+    <span class="kw">def</span> <span class="fn">say_hi</span>(<span class="self">self</span>):
+        <span class="kw">return</span> <span class="str">"Let's build something great!"</span></code></pre>
+          <div class="code-output" id="codeOutput"></div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section-eyebrow reveal">Get to know me</p>
+      <h2 class="section-title reveal">About Me</h2>
+      <div class="about-grid">
+        <p class="about-text reveal">
+          I'm a Software Engineer with <strong>4+ years of experience</strong> in backend engineering and
+          AI/LLM application development, with hands-on exposure to IoT, embedded systems, and drone
+          technology. I specialize in <strong>Python</strong>, <strong>Go</strong>, and
+          <strong>JavaScript</strong>, with strong expertise in microservices architecture, database
+          optimization, and scalable application development.
+          <br><br>
+          Currently, I'm building LLM-powered EHS (Environment, Health &amp; Safety) and QMS (Quality
+          Management System) inspection platforms — integrating the <strong>Model Context Protocol
+          (MCP)</strong> for tool-calling, and shipping with Docker, Kubernetes, and CI/CD pipelines.
+          On the side, I practice fine-tuning open-source LLMs for business use cases and building
+          end-to-end deployment pipelines.
+          <br><br>
+          I'm passionate about <strong>Agentic AI</strong>, <strong>RAG</strong>, <strong>Generative
+          AI</strong>, IoT solutions, and autonomous systems — and I like treating AI as a
+          pair-programmer, not a crutch.
+        </p>
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="127">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Public Repos</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="99">0</span><span class="stat-suffix">.7%</span>
+            <span class="stat-label">Best Query Speedup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <p class="section-eyebrow reveal">What I work with</p>
+      <h2 class="section-title reveal">Skills &amp; Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag" data-fact="Shipped more scripts than sleep">Python</span><span class="tag" data-fact="Goroutines &gt; my morning coffee">Go</span><span class="tag" data-fact="Still love it, callbacks and all">JavaScript</span>
+            <span class="tag" data-fact="Where it all started — pointers included">C</span><span class="tag" data-fact="SELECT * FROM skills WHERE sql = true">SQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>AI / LLM</h3>
+          <div class="tags">
+            <span class="tag" data-fact="LoRA, QLoRA, and a lot of patience">LLM Fine-tuning</span><span class="tag" data-fact="Because LLMs shouldn't make things up">RAG</span><span class="tag" data-fact="Treating AI as a co-pilot, not a crutch">Agentic AI</span>
+            <span class="tag" data-fact="Chains on chains on chains">LangChain</span><span class="tag" data-fact="Graphs &gt; linear pipelines">LangGraph</span><span class="tag" data-fact="Let the LLM call the shots (safely)">MCP</span>
+            <span class="tag" data-fact="Vectors, but make it searchable">ChromaDB</span><span class="tag" data-fact="Embeddings at scale">Pinecone</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Backend Frameworks</h3>
+          <div class="tags">
+            <span class="tag" data-fact="Async all the things">FastAPI</span><span class="tag" data-fact="Batteries included since day one">Django</span><span class="tag" data-fact="APIs the Django way">DRF</span>
+            <span class="tag" data-fact="Go's fastest way to ship a router">Go Gin</span><span class="tag" data-fact="Background jobs that actually run">Celery</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>ML / Deep Learning</h3>
+          <div class="tags">
+            <span class="tag" data-fact="Graphs, tensors, occasional tears">TensorFlow</span><span class="tag" data-fact="Dynamic graphs, static love">PyTorch</span><span class="tag" data-fact="Teaching machines to see">Computer Vision</span>
+            <span class="tag" data-fact="Pixels are just numbers, right?">OpenCV</span><span class="tag" data-fact="Pretrained models, zero regrets">Hugging Face</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>DevOps &amp; Tools</h3>
+          <div class="tags">
+            <span class="tag" data-fact="It works on my machine, and yours now too">Docker</span><span class="tag" data-fact="Pods, pods everywhere">Kubernetes</span><span class="tag" data-fact="Green checkmarks make me happy">GitHub Actions</span>
+            <span class="tag" data-fact="CI/CD, but make it GitLab">GitLab CI</span><span class="tag" data-fact="git commit -m &quot;fix again&quot;">Git</span><span class="tag" data-fact="Reverse proxy, forward progress">Nginx</span><span class="tag" data-fact="rm -rf ...just kidding">Linux</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Databases</h3>
+          <div class="tags">
+            <span class="tag" data-fact="ACID compliant, chaos resistant">PostgreSQL</span><span class="tag" data-fact="The reliable classic">MySQL</span><span class="tag" data-fact="Schema? We don't do that here">MongoDB</span>
+            <span class="tag" data-fact="Sub-millisecond mood booster">Redis</span><span class="tag" data-fact="Vectors, but make it searchable">ChromaDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <p class="section-eyebrow reveal">Where I've worked</p>
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jan 2026 — Present</span>
+            <h3>Software Engineer (LLM &amp; Backend)</h3>
+            <p class="timeline-company">SDS Manager LTD · Dhaka, Bangladesh</p>
+            <ul>
+              <li>Developing LLM-powered EHS and QMS inspection platforms, similar to SafetyCulture, iAuditor, and Velocity-type applications.</li>
+              <li>Integrated <strong>Model Context Protocol (MCP)</strong> for seamless LLM tool-calling and context management across microservices.</li>
+              <li>Containerized applications using <strong>Docker</strong> and orchestrated with <strong>Kubernetes</strong>, implementing CI/CD pipelines for automated testing and deployment.</li>
+            </ul>
+            <div class="tags small">
+              <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LLMs</span>
+              <span class="tag">MCP</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Apr 2022 — Dec 2025</span>
+            <h3>Software Engineer <span class="muted">(Promoted from Associate)</span></h3>
+            <p class="timeline-company">Brain Station 23 LTD · Dhaka, Bangladesh</p>
+            <ul>
+              <li>Engineered scalable microservices architecture for the Waadaa e-commerce platform, accelerating development speed by <strong>30%</strong>.</li>
+              <li>Designed relational database schemas to support a catalog of <strong>10,000+ products</strong>, ensuring high data integrity.</li>
+              <li>Optimized query performance, reducing average response time from <strong>690ms to 2ms</strong> — a <strong>99.7% improvement</strong>.</li>
+              <li>Improved the TEQ (Ferdia) platform, boosting user engagement by <strong>22%</strong> and cutting client onboarding time by <strong>30%</strong>.</li>
+              <li>Refactored database access layers, cutting backend load time by <strong>40%</strong>.</li>
+              <li>Built a Python-based automated testing framework with QA, increasing test coverage by <strong>50%</strong>.</li>
+            </ul>
+            <div class="tags small">
+              <span class="tag">Python</span><span class="tag">Go</span><span class="tag">JavaScript</span>
+              <span class="tag">Django</span><span class="tag">FastAPI</span><span class="tag">DRF</span>
+              <span class="tag">Gin</span><span class="tag">ReactJS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jul 2021 — Jan 2022</span>
+            <h3>Full Stack Developer</h3>
+            <p class="timeline-company">Trillionbits Ltd · Dhaka, Bangladesh</p>
+            <ul>
+              <li>Delivered REST API features using ExpressJS and Django, reducing system error rates by <strong>20%</strong>.</li>
+              <li>Refactored monolithic legacy modules into reusable components, resolving N+1 query issues and improving backend performance by <strong>35%</strong>.</li>
+            </ul>
+            <div class="tags small">
+              <span class="tag">Django</span><span class="tag">DRF</span><span class="tag">ReactJS</span><span class="tag">jQuery</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section alt">
+    <div class="container">
+      <p class="section-eyebrow reveal">Selected work</p>
+      <h2 class="section-title reveal">Projects</h2>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / LLM</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="ml">ML / CV</button>
+      </div>
+      <div class="project-grid">
+
+        <article class="project-card reveal" data-cat="ai">
+          <div class="project-top">
+            <span class="project-tag">AI / Agentic</span>
+          </div>
+          <h3>AI Research Assistant</h3>
+          <p>Agentic research assistant API with authentication, chat memory, and knowledge-base
+             retrieval for information discovery.</p>
+          <div class="tags small">
+            <span class="tag">FastAPI</span><span class="tag">LangGraph</span><span class="tag">PostgreSQL</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/ai-research-assistant" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="ai">
+          <div class="project-top">
+            <span class="project-tag">AI / RAG</span>
+          </div>
+          <h3>Restaurant Review &amp; Weather Assistant</h3>
+          <p>LangChain ReAct agent answering restaurant questions via RAG over real customer reviews,
+             plus live weather lookups.</p>
+          <div class="tags small">
+            <span class="tag">LangChain</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">FastAPI</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/restuarant_review_management" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="ai">
+          <div class="project-top">
+            <span class="project-tag">AI / Agents</span>
+          </div>
+          <h3>LinkedIn Lead Generation Agent</h3>
+          <p>Automates searching, extracting, and structuring potential client information from
+             LinkedIn for sales and outreach workflows.</p>
+          <div class="tags small">
+            <span class="tag">LangChain</span><span class="tag">LangGraph</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/lead-generator-agent-linkedin" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="ai">
+          <div class="project-top">
+            <span class="project-tag">AI / Tooling</span>
+          </div>
+          <h3>MCP Server Evolution Demo</h3>
+          <p>Hands-on comparison of pre-MCP custom integrations vs. a modern FastMCP implementation
+             for standardizing AI agent tool-calling.</p>
+          <div class="tags small">
+            <span class="tag">MCP</span><span class="tag">FastMCP</span><span class="tag">Python</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/mcp-server-evolution-demo" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="ml">
+          <div class="project-top">
+            <span class="project-tag">Computer Vision</span>
+            <span class="project-star">★ 11</span>
+          </div>
+          <h3>Face Recognition Auth System</h3>
+          <p>Face-recognition-based registration and login system, built with OpenCV and Django —
+             my most-starred open-source project.</p>
+          <div class="tags small">
+            <span class="tag">OpenCV</span><span class="tag">Django</span><span class="tag">Python</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/Face-recognition-registration-and-login-system-OpenCv-Django" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="ml">
+          <div class="project-top">
+            <span class="project-tag">ML Pipeline</span>
+          </div>
+          <h3>Telco Churn Prediction</h3>
+          <p>Customer segmentation and churn prediction with a fully leak-proof SVC pipeline and
+             explainable ML techniques.</p>
+          <div class="tags small">
+            <span class="tag">scikit-learn</span><span class="tag">SVC</span><span class="tag">Explainable ML</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/telco-churn-segmentation-svc-pipeline" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="backend">
+          <div class="project-top">
+            <span class="project-tag">Backend / Microservices</span>
+          </div>
+          <h3>FastAPI + gRPC Boilerplate</h3>
+          <p>Production-ready boilerplate for building scalable microservices with FastAPI and gRPC.</p>
+          <div class="tags small">
+            <span class="tag">FastAPI</span><span class="tag">gRPC</span><span class="tag">Python</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/fastapi-grpc-boilerplate" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="backend">
+          <div class="project-top">
+            <span class="project-tag">Backend / Go</span>
+          </div>
+          <h3>Go Gin Boilerplate</h3>
+          <p>Fast way to ship a REST API with the Gin framework — structured project defaulting to
+             SQLite with JWT authentication middleware.</p>
+          <div class="tags small">
+            <span class="tag">Go</span><span class="tag">Gin</span><span class="tag">JWT</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/go-gin-boilerplate" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-cat="backend">
+          <div class="project-top">
+            <span class="project-tag">Full-Stack</span>
+          </div>
+          <h3>Async Book Crawler API</h3>
+          <p>Async FastAPI crawler for books.toscrape.com with MongoDB storage, scheduling, and
+             change detection.</p>
+          <div class="tags small">
+            <span class="tag">FastAPI</span><span class="tag">MongoDB</span><span class="tag">Async</span>
+          </div>
+          <a href="https://github.com/GenesisBlock3301/book_crawler_api" target="_blank" rel="noopener" class="project-link">
+            View on GitHub <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+      </div>
+      <p class="projects-more reveal">
+        <a href="https://github.com/GenesisBlock3301?tab=repositories" target="_blank" rel="noopener">
+          See all 127+ repositories on GitHub →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section id="education" class="section">
+    <div class="container edu-grid">
+      <div>
+        <p class="section-eyebrow reveal">Academic background</p>
+        <h2 class="section-title reveal">Education</h2>
+        <div class="edu-card reveal">
+          <h3>BSc in Computer Science &amp; Engineering</h3>
+          <p class="timeline-company">Daffodil International University, Dhaka, Bangladesh</p>
+          <span class="timeline-date">Jan 2017 — Jan 2021</span>
+          <p class="edu-cgpa">CGPA: 3.71 / 4.0</p>
+        </div>
+      </div>
+      <div>
+        <p class="section-eyebrow reveal">Continuous learning</p>
+        <h2 class="section-title reveal">Certifications</h2>
+        <ul class="cert-list reveal">
+          <li><strong>Deep Learning</strong> — Kaggle <span class="muted">· ANN, SGD, Dropout, Batch, Binary Classification</span></li>
+          <li><strong>Intermediate Machine Learning</strong> — Kaggle <span class="muted">· Model validation, Feature engineering, XGBoost</span></li>
+          <li><strong>Intro to Machine Learning</strong> — Kaggle <span class="muted">· Supervised learning, Decision trees, Overfitting</span></li>
+          <li><strong>Cyber Security &amp; Physical Protection at Workplace</strong> — Brain Station 23 <span class="muted">· Malware analysis, Cyber hygiene</span></li>
+          <li><strong>Python (Intermediate)</strong> — HackerRank <span class="muted">· Data structures, Algorithms, OOP</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <p class="section-eyebrow">Get in touch</p>
+        <h2 class="section-title">Let's Build Something Great</h2>
+        <p class="contact-desc">
+          Open to collaboration on AI/ML projects, backend systems, and interesting problems.
+          Feel free to reach out — I'm always up for a good conversation about tech.
+        </p>
+        <div class="contact-links">
+          <span class="contact-link-row">
+            <a href="mailto:mdnuraminsifat380@gmail.com" class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6zm-2 0l-8 5-8-5"/></svg>
+              mdnuraminsifat380@gmail.com
+            </a>
+            <button class="copy-btn" id="copyEmailBtn" data-email="mdnuraminsifat380@gmail.com" title="Copy email" aria-label="Copy email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            </button>
+          </span>
+          <a href="https://www.linkedin.com/in/nur-amin-sifat/" target="_blank" rel="noopener" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 11.01-4.14 2.07 2.07 0 01-.01 4.14zM7.11 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+            linkedin.com/in/nur-amin-sifat
+          </a>
+          <a href="https://github.com/GenesisBlock3301" target="_blank" rel="noopener" class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.26 5.69.42.36.78 1.08.78 2.18 0 1.57-.02 2.84-.02 3.23 0 .3.21.66.79.55A10.52 10.52 0 0023.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+            github.com/GenesisBlock3301
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <form class="contact-form" id="contactForm">
+          <label>
+            Name
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required placeholder="Let's talk about..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary full-width">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p>&copy; <span id="year"></span> Nur Amin Sifat. Built with plain HTML, CSS &amp; JS.</p>
+    <a href="#home" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<div class="easter-egg-overlay hidden" id="easterEgg">
+  <div class="easter-egg-box">
+    <button class="easter-egg-close" id="easterEggClose" aria-label="Close">✕</button>
+    <p class="easter-egg-title">$ sudo access --granted</p>
+    <pre class="easter-egg-art">   /\_/\
+  ( o.o )
+   &gt; ^ &lt;   you found the secret console</pre>
+    <ul class="easter-egg-facts" id="easterEggFacts"></ul>
+    <p class="easter-egg-hint">Press <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
