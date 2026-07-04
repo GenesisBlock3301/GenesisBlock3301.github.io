@@ -945,7 +945,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 760px) {
-  .container { padding: 0 18px; }
+  .container { padding: 0 18px; text-align: center; }
+  .about-grid,
+  .timeline,
+  .project-grid,
+  .contact-form,
+  .edu-card,
+  .cert-list { text-align: left; }
+  .hero-text { text-align: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-cta { justify-content: center; }
+  .socials { justify-content: center; }
+  .skill-card .tags,
+  .project-filters { justify-content: center; }
+  .contact-links { align-items: center; }
+  .contact-link,
+  .contact-link-row { justify-content: center; }
   .nav-links {
     position: fixed;
     top: 68px; left: 0; right: 0;
